@@ -14,34 +14,48 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: gray;
+  /* padding-top: 40px; */
+  /* padding-bottom: 40px; */
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  align-items: stretch;
+  /* display: inline-block; */
+  justify-content: space-between;
+  padding: 20px;
 
 }
 
 .Card {
-  width: 400px;
-  background-color: gray;
+  width: 300px;
+  background-color: lavender;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 40px;
+
 }
 
 p {
   color: red;
+}
+
+.recipeTitle {
+  color: black;
+  padding-bottom: 20px;
 }
