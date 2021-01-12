@@ -25,7 +25,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="Wrapper">
+        <h1>What's Cookin'?</h1>
+    
           <div>
             <form className="form" onSubmit={searchIngredients}>
               <label className="label" htmlFor="query">
@@ -35,7 +36,7 @@ function App() {
                 className="input"
                 type="text"
                 name="query"
-                placeholder="eggs"
+                placeholder=" ex. eggs"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -43,15 +44,23 @@ function App() {
                 Search
               </button>
             </form>
+
           </div>
+          </header>
+          <div className="Wrapper">
+
           {ingredients.map((ingredient) => {
             return (
               <div className="Card">
-                <span>{ingredient.recipe.label}</span>
-                <img alt="recipe" src={ingredient.recipe.image} />
-                {ingredient.recipe.ingredientLines.map((step) => (
-                  <p>{step}</p>
-                ))}
+                <div className="recipeTitle">
+                  <span>{ingredient.recipe.label}</span>
+                </div>
+                <img
+                  alt="recipe"
+                  src={ingredient.recipe.image}
+                  style={{ maxWidth: "50px;" }}
+                />
+
                 <p>
                   Source:
                   <a href={ingredient.recipe.url}>{ingredient.recipe.source}</a>
@@ -60,7 +69,7 @@ function App() {
             );
           })}
         </div>
-      </header>
+  
     </div>
   );
 }
