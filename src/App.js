@@ -26,50 +26,54 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>What's Cookin'?</h1>
-    
-          <div>
-            <form className="form" onSubmit={searchIngredients}>
-              <label className="label" htmlFor="query">
-                update Ingredient
-              </label>
-              <input
-                className="input"
-                type="text"
-                name="query"
-                placeholder=" ex. eggs"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-              <button className="button" type="submit">
-                Search
-              </button>
-            </form>
 
-          </div>
-          </header>
-          <div className="Wrapper">
-
-          {ingredients.map((ingredient) => {
-            return (
-              <div className="Card">
-                <div className="recipeTitle">
-                  <span>{ingredient.recipe.label}</span>
-                </div>
-                <img
-                  alt="recipe"
-                  src={ingredient.recipe.image}
-                  style={{ maxWidth: "50px;" }}
-                />
-
-                <p>
-                  Source:
-                  <a href={ingredient.recipe.url}>{ingredient.recipe.source}</a>
-                </p>
-              </div>
-            );
-          })}
+        <div>
+          <form className="form" onSubmit={searchIngredients}>
+            <label className="label" htmlFor="query"></label>
+            <input
+              className="input"
+              type="text"
+              name="query"
+              placeholder=" search for recipes"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button className="button" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-  
+      </header>
+      <div>
+        {ingredients.map((ingredient) => {
+          return (
+            <div className="Card">
+              <div className="flip-card">
+                <div className="card-inner">
+                  <div className="front">
+                    <div className="recipeTitle">
+                      <span>{ingredient.recipe.label}</span>
+                    </div>
+                    <img alt="recipe" style={{width:"30px;"}}src={ingredient.recipe.image} />
+                  </div>
+                  <div className="back">
+                    <h2>Ingredients</h2>
+                    {ingredient.recipe.ingredientLines.map((step) => (
+                      <p>{step}</p>
+                    ))}
+
+                    <p>
+                      <a href={ingredient.recipe.url}>
+                        <button>See Full Recipe</button>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
