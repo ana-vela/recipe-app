@@ -87,15 +87,16 @@ h2 {
 
 /* Style the front side (fallback if image is missing) */
 .front {
-  background-color: rgb(204, 198, 230);
+  background-color: rgb(234, 235, 247);
   color: black;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
 /* Style the back side */
 .back {
-  background-color: rgb(204, 198, 230);
-  color: white;
+  background-color: rgb(230, 234, 242);
   transform: rotateY(180deg);
   overflow: scroll;
   padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
