@@ -30,7 +30,7 @@
 }
 
 .Card {
-  width: 300px;
+  width: 350px;
   /* background-color: lavender; */
   display: inline-flex;
   flex-direction: column;
