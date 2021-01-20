@@ -20,7 +20,7 @@
   align-items: start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: rgb(109, 24, 24);
   background-image: url('images/salad.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -47,12 +47,8 @@ p {
   font-size: 16px;
 }
 
-h2 {
-  color: black;
-}
 .recipeTitle {
-  color: black;
-  padding: 20px;
+  color: rgb(109, 24, 24);
 }
 
 .flip-card {
@@ -89,14 +85,14 @@ h2 {
 
 /* Style the front side (fallback if image is missing) */
 .front {
-  background-color: rgb(234, 235, 247);
+  background-color: eggshell;
   color: black;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
 /* Style the back side */
 .back {
-  background-color: rgb(230, 234, 242);
+  background-color: eggshell;
   transform: rotateY(180deg);
   overflow: scroll;
   padding: 10px;

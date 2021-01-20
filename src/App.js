@@ -52,7 +52,7 @@ function App() {
                 <div className="card-inner">
                   <div className="front">
                     <div className="recipeTitle">
-                      <span>{ingredient.recipe.label}</span>
+                      <h2>{ingredient.recipe.label}</h2>
                     </div>
                     <img alt="recipe" style={{width:"30px;"}}src={ingredient.recipe.image} />
                   </div>
